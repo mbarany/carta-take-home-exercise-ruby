@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative './src/cap_table'
+
+csv_file = ARGV[0]
+target_date = ARGV[1]
+precision = (ARGV[2] || 0).to_i
+
+result = CapTable.new(csv_file, target_date, precision).()
+
+puts result
